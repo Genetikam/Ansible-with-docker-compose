@@ -11,10 +11,16 @@
       -  docker-compose
     state: present
 
+- name: Create directory
+  file:
+    path: /app
+    state: directory
+    mode: '0755'
+
 - name: Copy files
   template: src={{item.src}} dest={{item.dest}}
   with_items:
-    -  { src: .env, dest: /root/.env }
-    -  { src: docker-compose.yml, dest: /root/docker-compose.yml }
-    -  { src: dockerfile, dest: /root/dockerfile }
-    -  { src: HelloWorldApp.py, dest: /root/HelloWorldApp.py}
+    -  { src: .env, dest: /app/.env }
+    -  { src: docker-compose.yml, dest: /app/docker-compose.yml }
+    -  { src: dockerfile, dest: /app/dockerfile }
+    -  { src: HelloWorldApp.py, dest: /app/HelloWorldApp.py}

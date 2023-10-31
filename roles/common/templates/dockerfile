@@ -1,4 +1,5 @@
 FROM python:3.9.18-alpine3.18
-COPY .env HelloWorldApp.py ./
+WORKDIR /app
+COPY .env HelloWorldApp.py /app/
 RUN apk update && apk upgrade && pip install python-dotenv==1.0.0 && pip install Flask==3.0.0
-ENTRYPOINT ["python", "./HelloWorldApp.py"]
+ENTRYPOINT ["python", "/app/HelloWorldApp.py"]
