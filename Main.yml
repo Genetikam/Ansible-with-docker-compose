@@ -1,0 +1,10 @@
+---
+- hosts: web-server
+  remote_user: root
+  roles:
+  -  common
+
+- hosts: web-server
+  remote_user: root
+  roles:
+  -  docker-compose

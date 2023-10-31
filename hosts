@@ -1,0 +1,5 @@
+all:
+  hosts:
+    web-server:
+      ansible_host: 10.69.0.189
+      ansible_user: root
