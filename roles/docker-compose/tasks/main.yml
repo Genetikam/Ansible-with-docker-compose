@@ -1,4 +1,4 @@
 ---
 - name: Start docker-compose
   shell:
-    cmd: "docker-compose -f docker-compose.yml up -d"
+    cmd: "cd /app && docker-compose -f docker-compose.yml up -d"
