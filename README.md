@@ -7,7 +7,7 @@ https://old-releases.ubuntu.com/releases/22.04/ubuntu-22.04-live-server-amd64.is
 # Инструкция:
 1) Устанавливаем ansible 2.10.8 любым удобным способом. Например:
 ```
-apt install ansible.
+apt install ansible
 ```  
 2) Генерируем ssh ключ root'а и копируем на хост, где будем устанавливать приложение.
 ```
